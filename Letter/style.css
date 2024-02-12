@@ -1,0 +1,45 @@
+body{
+    background-color: rgb(2, 112, 171);
+}
+.main-container{
+    height: 100vh;
+    width: 70vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1{
+    left: 10%;
+    height: 90vh;
+    width: 300px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 1;
+    
+}
+
+.box2{
+    height: 80vh;
+    width: 300px;
+    background-color: #ffe55e;
+    justify-content: center;
+    transition: transform 0.5s ease;
+    z-index: -1;
+}
+.box2.hidden{
+    transform: translatex(50%);
+}
+.lines{
+    margin-top: 25px;
+    opacity: 0;
+    transition: 3s ease;
+}
+.line-hr1{
+    margin: 20px;
+}
+button{
+    cursor: pointer;
+}
+

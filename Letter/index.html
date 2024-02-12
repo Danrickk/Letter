@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="main-container">
+
+        <div class="box1">
+
+            <button onclick="sliders()">Open</button>
+            <button onclick="Extend()">Extend</button>
+
+        </div>
+
+        <div id="slide-div" class="box2">
+
+            <div class="lines">
+                <div class="line-hr1">
+                    <hr>
+                </div>
+                <div class="line-hr1">
+                    <hr>
+                </div>
+                <div class="line-hr1">
+                    <hr>
+                </div>
+                <div class="line-hr1">
+                    <hr>
+                </div>
+                <div class="line-hr1">
+                    <hr>
+                </div>
+                <div class="line-hr1">
+                    <hr>
+                </div>
+
+                <div class="line-hr1">
+                    <hr>
+                </div>
+                <div class="line-hr1">
+                    <hr>
+                </div>
+                <div class="line-hr1">
+                    <hr>
+                </div>
+                <div class="line-hr1">
+                    <hr>
+                </div>
+                <div class="line-hr1">
+                    <hr>
+                </div>
+                <div class="line-hr1">
+                    <hr>
+                </div>
+                <div class="line-hr1">
+                    <hr>
+                </div>
+                <div class="line-hr1">
+                    <hr>
+                </div>
+                <div class="line-hr1">
+                    <hr>
+                </div>
+                <div class="line-hr1">
+                    <hr>
+                </div>
+                <div class="line-hr1">
+                    <hr>
+                </div>
+                <div class="line-hr1">
+                    <hr>
+                </div>
+                <div class="line-hr1">
+                    <hr>
+                </div>
+                <div class="line-hr1">
+                    <hr>
+                </div>
+                <div class="line-hr1">
+                    <hr>
+                </div>
+                <div class="line-hr1">
+                    <hr>
+                </div>
+                <div class="line-hr1">
+                    <hr>
+                </div>
+                <div class="line-hr1">
+                    <hr>
+                </div>
+                <div class="line-hr1">
+                    <hr>
+                </div>
+                <div class="line-hr1">
+                    <hr>
+                </div>
+                <div class="line-hr1">
+                    <hr>
+                </div>
+            </div>
+                <div class="text-2">
+                    
+                </div>
+        </div>
+       
+
+    </div>
+    <script>
+     function sliders(){
+        var contentDiv = document.querySelector('.box2');
+        contentDiv.classList.toggle('hidden');
+            if (!contentDiv.classList.contains('hidden')) {
+                contentDiv.style.transition = 'transform 0.5s ease';
+            }
+     }
+     let timeOut;
+
+        function timeOuter(){
+            timeOut = setTimeout(Extend, 3000);
+        }
+
+        function Extend(){
+            var contentDiv = document.querySelector('.box2');
+            var frontDiv = document.querySelector('.box1');
+            var lines =document.querySelector('.lines');
+             contentDiv.classList.toggle('hidden');
+
+                if (contentDiv.classList.contains('hidden')) {
+                        frontDiv.style.zIndex = '1';
+                        contentDiv.style.zIndex ="0";
+                        
+                    } else {
+                        frontDiv.style.zIndex = '0';
+                        contentDiv.style.zIndex ='1';
+                        contentDiv.style.transition ='1s ease'; 
+                        lines.style.opacity='1';
+                        }
+     }
+    </script>
+</body>
+</html>
